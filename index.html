@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>KelemeKids</title>
-  </head>
-  <body>
-    <section class="container">
-      <div class="header">
-        <div class="logo">KelemKids</div>
-        <div class="right-side">
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Help</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </div>
-        <button class="login-btn">Login</button>
-      </div>
-      <div class="description">
-        <div class="content">
-          <h2>Welcome to KelemKids, where education meets excitement!🚀</h2>
-          <p>
-            Explore a world of fun and learning designed just for kids. Our
-            interactive platform engages young minds with educational games,
-            creative activities, and exciting lessons. KelemKids is not just a
-            website; it's a digital playground where curiosity sparks knowledge.
-            Join us on this educational adventure and make learning an
-            unforgettable journey for your child.🌟
-          </p>
-          <button class="more">More info</button>
-        </div>
-        <div class="placeholder">
-          <img id="imageGIF" src="images/kid7.png" alt="Channels' logo" />
-        </div>
-      </div>
-    </section>
 
-    <section class="info-section">
-      <div class="information">
-        <div class="info-title"><h2>Our Programs</h2></div>
-        <div class="info-container">
-          <div class="card-container">
-            <div class="card">Games 🎮</div>
-            Dive into a world of interactive fun!
-          </div>
-          <div class="card-container">
-            <div class="card">Educational Videos and Books 📚📹</div>
-            Spark curiosity with our collection of educational videos and books.
-          </div>
-          <div class="card-container">
-            <div class="card">Vocabulary 🗣️</div>
-            Expand your child's language skills with our vocabulary lessons.
-          </div>
-          <div class="card-container">
-            <div class="card">Facts 🧠</div>
-            Explore the wonders of the world with our fascinating facts.
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>KelemeKids</title>
+</head>
+
+<body>
+  <section class="container">
+    <div class="header">
+      <img src="image/kelemkids-logos_transparent.png" alt="Channels' logo" />
+      <div class="right-side">
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button> 
+    </div>  
+    
+    
+  <div id="login-form" class="login-page">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" onclick="login()" class="toggle-btn">
+          Log In
+        </button>
+        <button type="button" onclick="register()" class="toggle-btn">
+          Register
+        </button>
+      </div>
+      <form id="login" class="input-group-login">
+        <input type="text" class="input-field" placeholder="Email" required />
+        <input type="password" class="input-field" placeholder="Password" required />
+        <input type="checkbox" class="check-box" /><span>Remember Password</span>
+        <button type="submit" class="submit-btn">Log in</button>
+      </form>
+      <form id="register" class="input-group-register">
+        <input type="text" class="input-field" placeholder="First Name" required />
+        <input type="text" class="input-field" placeholder="Last Name " required />
+        <input type="email" class="input-field" placeholder="Email " required />
+        <input type="password" class="input-field" placeholder="Enter Password" required />
+        <input type="password" class="input-field" placeholder="Confirm Password" required />
+        <input type="checkbox" class="check-box" /><span>I agree to the terms and condition</span>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+    
+    <div class="description">
+      <div class="content">
+        <h2>Welcome to KelemKids, where education meets excitement!🚀</h2>
+        <p>
+          Explore a world of fun and learning designed just for kids. Our
+          interactive platform engages young minds with educational games,
+          creative activities, and exciting lessons. KelemKids is not just a
+          website; it's a digital playground where curiosity sparks knowledge.
+          Join us on this educational adventure and make learning an
+          unforgettable journey for your child.🌟
+        </p>
+        <button class="more">More info</button>
+      </div>
+      <div class="img1">
+        <img id="imageGIF" src="image/kid7.png" alt="Channels' logo" />
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="information">
+      <div class="info-title">
+        <h2>Our Programs</h2>
+      </div>
+      <div class="info-container">
+        <div class="card-container">
+          <div class="card">Games 🎮</div>
+          Dive into a world of interactive fun!
+        </div>
+        <div class="card-container">
+          <div class="card"><a href="books.html">Videos and Books 📚📹</a> </div>
+          Spark curiosity with our collection of educational videos and books.
+        </div>
+        <div class="card-container">
+          <div class="card">Vocabulary 🗣️</div>
+          Expand your child's language skills with our vocabulary lessons.
+        </div>
+        <div class="card-container">
+          <div class="card">Facts 🧠</div>
+          Explore the wonders of the world with our fascinating facts.
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="verse">
-      <div class="verse-text">
-        "Education is the most powerful weapon which you can use to change the
-        world."
-      </div>
-      <div class="verse-place">- Nelson Mandela</div>
-    </section>
+  <section class="verse">
+    <div class="verse-text">
+      "Education is the most powerful weapon which you can use to change the
+      world."
+    </div>
+    <div class="verse-place">- Nelson Mandela</div>
+  </section>
 
-    <section class="join-us">
-      <h3>🌟 Elevate your child's learning experience with KelemKids!</h3>
-      <div class="join-us-text">
-        Our carefully curated content ensures a perfect blend of education and
-        fun.Give your child the gift of knowledge wrapped in joy. Sign up with
-        KelemKids today and watch their curiosity flourish! 🚀✨
-        <button class="join">Sign-up</button>
-      </div>
-    </section>
+  <section class="join-us">
+    <h3>🌟 Elevate your child's learning experience with KelemKids!</h3>
+    <div class="join-us-text">
+      Our carefully curated content ensures a perfect blend of education and
+      fun.Give your child the gift of knowledge wrapped in joy. Sign up with
+      KelemKids today and watch their curiosity flourish! 🚀✨
+      <button class="join">Sign-up</button>
+    </div>
+  </section>
 
-    <section class="footer">
-      <div class="footer-container">Copyright &#169; 2023</div>
-    </section>
-  </body>
+  <section class="footer">
+    <div class="footer-container">Copyright &#169; 2023</div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
 </html>
