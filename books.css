@@ -1,553 +1,370 @@
-*{
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
-
-
-section{
-    width: 100%;
-    height: 100vh;
-    background-image: url(image/bg.png);
-    background-size: cover;
-    background-position: center;
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-section nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 0 10px #089da1;
-    background: #fff;
-    position: fixed;
-    left: 0;
-    z-index: 100;
-}
-
-section nav .logo img{
-    width: 100px;
-    cursor: pointer;
-    margin: 8px 0;
-}
-
-section nav ul{
-    list-style: none;
-}
-
-section nav li{
-    display: inline-block;
-    padding: 0 10px;
-}
-
-section nav li a{
-    text-decoration: none;
-    color: #000;
-}
-
-section nav li a:hover{
-    color: #089da1;
-}
-
-section nav .social_icon i{
-    margin: 0 5px;
-    font-size: 18px;
-}
-
-section nav .social_icon i:hover{
-    color: #089da1;
-    cursor: pointer;
-}
-
-section .main{
-    background: url(./image/table.jpg);
-    height: 100%;
-    margin: 20px;
-    background-repeat: no-repeat;
-}
-
-section .main h1{
-    position: relative;
-    font-size: 55px;
-}
-
-section .main h1 span{
-    color: #089da1;
-}
-
-section .main p{
-    width: 650px;
-    text-align: justify;
-    line-height: 22px;
-    position: relative;
-    top: 125px;
-    left: 25px;
-}
-
-section .main .main_tag .main_btn{
-    background: #089da1;
-    padding: 10px 20px;
-    position: relative;
-    top: 200px;
-    left: 25px;
-    color: #fff;
-    text-decoration: none;
-}
-
-section .main .main_img img{
-    width: 350px;
-    position: relative;
-    top: 90px;
-    border-radius: 20px;
-}
-
-
-/*about*/
-
-.about{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.about .about_image img{
-    width: 800px;
-}
-
-.about .about_tag h1{
-    font-size: 50px;
-    position: relative;
-    bottom: 35px;
-}
-
-.about .about_tag p{
-    line-height: 22px;
-    width: 650px;
-    text-align: justify;
-    margin-bottom: 15px;
-}
-
-.about .about_tag .about_btn{
-    padding: 10px 20px;
-    background: #089da1;
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    top: 50px;
-}
-
-
-
-/*Books*/
-
-.featured_boks{
-    width: 100%;
-    height: 100vh;
-    padding: 70px 0;
-}
-
-.featured_boks h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    font-size: 45px;
-}
-
-.featured_boks .featured_book_box{
-    width: 95%;
-    height: 60vh;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-    overflow-x: scroll;
-}
-
-.featured_boks .featured_book_box .featured_book_card{
-    width: 250px;
-    height: 420px;
+section {
     text-align: center;
-    padding: 5px;
-    border: 1px solid #919191;
-    margin: auto 20px;
+    padding: 0 0 50px 0;
 }
 
-.featured_boks .featured_book_box .featured_book_card:hover{
-    box-shadow: 0 0 5px #089da1;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_img img{
-    width: 150px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag h2{
-    margin: 12px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .writer{
-    color: #919191;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .categories{
-    color: #089da1;
-    margin-top: 8px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price{
-    margin-top: 8px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price sub{
-    font-weight: 100;
-    padding: 0 5px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn{
-    padding: 8px 20px;
-    border: 2px solid #089da1;
-    text-decoration: none;
-    color: #000;
-}
-
-::-webkit-scrollbar{
-    width: 10px;
-    height: 5px;
-}
-
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
-}
-
-::-webkit-scrollbar-thumb{
-    background: #089da1;
-    border-radius: 10px;
-}
-
-
-
-
-/*arrivals*/
-
-.arrivals{
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 35px;
-}
-
-.arrivals h1{
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.arrivals .arrivals_box{
-    width: 95%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 25px 0;
-}
-
-.arrivals .arrivals_box .arrivals_card{
-    width: 250px;
-    height: 340px;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #919191;
-    margin: auto 20px;
-}
-
-.arrivals .arrivals_box .arrivals_card:hover{
-    box-shadow: 0 0 5px #089da1;
-}
-
-.arrivals .arrivals_box .arrivals_card .arrivals_image{
-    width: 150px;
-    height: 220px;
-    margin: 0 auto;
-    cursor: pointer;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    overflow: hidden;
-}
-
-.arrivals .arrivals_box .arrivals_card .arrivals_image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.3s;
-}
-
-.arrivals .arrivals_box .arrivals_card:hover .arrivals_image img{
-    transform: scale(1.1);
-}
-
-.arrivals .arrivals_box .arrivals_card .arrivals_tag p{
-    font-family: queen of camelot;
-    font-size: 20px;
-    margin: 8px 0;
-}
-
-.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_icon{
-    color: #089da1;
-    margin-bottom: 18px;
-}
-
-.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_btn{
-    padding: 8px 20px;
-    border: 2px solid #089da1;
-    text-decoration: none;
-    color: #000;
-}
-
-
-
-
-/*reviews*/
-
-.reviews{
-    width: 100%;
-    height: auto;
-}
-
-.reviews h1{
-    text-align: center;
-    font-size: 50px;
-    margin-top: 55px;
-}
-
-.reviews .review_box{
-    width: 95%;
-    height: 50vh;
-    margin: 15px auto;
+/* Update the styles for the navigation section */
+nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.reviews .review_box .review_card{
-    width: 400px;
-    height: 320px;
-    box-shadow: 0 0 8px #089da1;
-    padding: 15px;
-    margin: 0 12px;
-}
-
-.reviews .review_box .review_card i{
-    float: right;
-    font-size: 120px;
-    position: relative;
-    bottom: 20px;
-    color: #eaeaea;
-}
-
-.reviews .review_box .review_card .card_top img{
-    width: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.reviews .review_box .review_card .card p{
-    margin: 10px 0 10px 0;
-    text-align: justify;
-    line-height: 22px;
-}
-
-.reviews .review_box .review_card .card .review_icon i{
-    font-size: 16px;
-    float: left;
-    margin-top: 20px;
-    color: #089da1;
-    padding: 0 1px;
-}
-
-
-
-
-/*Banner*/
-
-.banner{
-    width: 100%;
-    height: 50vh;
-    background-image: url(image/banner.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.banner .banner_btn{
-    padding: 8px 20px;
-    background: #089da1;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    top: 70%;
-    left: 7%;
-}
-
-
-
-
-/*Blog*/
-
-.blog{
-    width: 100%;
-    height: auto;
-    margin: 25px 0;
-}
-
-.blog h1{
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.blog .blog_box{
-    width: 95%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.blog .blog_box .blog_card{
-    margin: 0 auto;
-    width: 450px;
-    height: auto;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-.blog .blog_box .blog_card .blog_img{
-    width: 450px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.blog .blog_box .blog_card .blog_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.blog .blog_box .blog_card .blog_tag{
-    padding: 20px;
-}
-
-.blog .blog_box .blog_card .blog_tag h2{
-    color: #089da1;
-}
-
-.blog .blog_box .blog_card .blog_tag p{
-    margin-top: 10px;
-    text-align: justify;
-    line-height: 22px;
-}
-
-.blog .blog_box .blog_card .blog_tag .blog_icon{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    color: #089da1;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffa569; /* Pink background color for a playful look */
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Make the logo circular */
+  }
+  
+  /* Add a playful font for the welcome message */
+  nav p {
+    font-size: 40px;
+    color: #fff; /* White text color */
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Choose a playful font */
+  }
+  
+  /* Add more style to the social icons */
+  .social_icon i {
+    font-size: 32px;
+    color: #fff;
+    margin-left: 10px;
     cursor: pointer;
+  }
+  
+  /* Add hover effect to the social icons */
+  .social_icon i:hover {
+    color: #ffcccb; /* Lighter pink on hover */
+    transform: scale(1.2); /* Increase size on hover */
+  }
+  
+.logo img {
+    max-width: 80px;
 }
 
 
-
-
-/*Footer*/
-
-footer{
-    width: 100%;
-    background: #eaeaea;
-}
-
-footer .footer_main{
-    width: 100%;
+.main {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-footer .footer_main .tag{
-    margin: 10px 0;
+.main_tag {
+    flex: 1;
+    max-width: 600px;
+}
+/* Add this at the end of your CSS */
+
+.fetch-books-container {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 20px;
 }
 
-footer .footer_main .tag img{
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-footer .footer_main .tag p{
-    width: 250px;
-    line-height: 22px;
-    text-align: justify;
-}
-
-footer .footer_main .tag h1{
-    font-size: 25px;
-    margin: 25px 0;
-    color: #000;
-}
-
-footer .footer_main .tag a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin: 10px 0;
-}
-
-footer .footer_main .tag i{
-    margin-right: 10px;
-}
-
-footer .footer_main .tag .social_link i{
-    margin: 0 5px;
-}
-
-footer .footer_main .tag .search_bar{
-    width: 230px;
-    height: 30px;
-    background: rgba(202,202,202);
-    border-radius: 25px;
-}
-
-footer .footer_main .tag .search_bar input{
-    width: 200px;
-    padding: 2px 0;
-    position: relative;
-    top: 17%;
-    left: 6%;
-    border: none;
-    outline: none;
-    font-size: 13px;
-    background: none;
-}
-
-footer .footer_main .tag .search_bar button{
-    padding: 7px 15px;
-    background: #089da1;
-    border: none;
-    margin-top: 15px;
-    border-radius: 25px;
+.fetch_books_btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #FFD700; /* Gold color */
     color: #fff;
+    border: 2px solid #FFA500; /* Darker orange border */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+.fetch_books_btn:hover {
+    background-color: #FFA500; /* Darker orange color on hover */
+}
+
+
+
+h1 span {
+    color: #ff69b4; /* Hot Pink */
+}
+
+p {
+    color: #696969; /* Dim Gray */
+    margin: 20px 0;
+}
+
+.main_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Hot Pink */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+h1 {
+    color: #2e8b57; /* Sea Green */
+    margin-bottom: 20px;
+}
+
+
+/* Featured Books Section */
+.featured_boks {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.featured_book_box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.featured_book_card {
+    width: 200px;
+    height: 350px;
+    margin: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured_book_card:hover {
+    transform: scale(1.05);
+}
+
+.featured_book_img img {
+    max-width: 100%;
+    height: 30%; /* Adjust the height as needed */
+}
+
+
+.featurde_book_tag {
+    height: 100%;
+    padding: 5px;
+    background-color: #add8e6; /* Light Blue */
+}
+
+.featurde_book_tag h2 {
+    color: #1e90ff; /* Dodger Blue */
+}
+
+.writer, .categories {
+    color: #2f4f4f; /* Dark Slate Gray */
+}
+
+
+
+/* Banner Section */
+.banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.banner_btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4500; /* Orange Red */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.banner_btn:hover {
+    background-color: #ff8c00; /* Dark Orange */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer_main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tag {
+    flex: 1;
+    max-width: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag img {
+    max-width: 100%;
+}
+
+.tag p {
+    margin-top: 20px;
+}
+
+h1, h1 a {
+    color: #fff;
+}
+
+a {
+    color: #ffa07a; /* Light Salmon */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd700; /* Gold */
+}
+
+.social_link i {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
     cursor: pointer;
 }
 
-footer .end{
+/* Newsletter Section */
+.search_bar {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    color: #000;
+    margin-top: 20px;
 }
 
-footer .end span{
-    color: #089da1;
-    margin-left: 10px;
+/* Adjust the width of the email input box in the footer */
+.search_bar input {
+    flex: 2;
+    max-width: 60%; /* Set a maximum width for the input box */
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Adjust the width of the "Subscribe" button in the footer */
+.search_bar button {
+    flex: 1;
+    max-width: 100%; /* Set a maximum width for the button */
+    padding: 10px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.search_bar button:hover {
+    background-color: #ff8c00; /* Dark Orange */
+}
+
+/* End Section */
+.end {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.end span {
+    color: #ff69b4; /* Hot Pink */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 576px) {
+    /* General Styles */
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        max-width: 60px;
+    }
+
+    .social_icon i {
+        font-size: 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    /* Heading Styles */
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        margin: 15px 0;
+    }
+
+    .fetch-books-container {
+        flex-direction: row; /* Display buttons horizontally on small screens */
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
+        justify-content: center; /* Center buttons */
+    }
+
+    .fetch_books_btn {
+        margin: 5px; /* Add some space between horizontally aligned buttons */
+        width: 100px; /* Allow buttons to take up natural width */
+        padding: 15PX;
+    }
+    /* Button Styles */
+    .main_btn,
+    .f_btn,
+    .banner_btn {
+        padding: 12px 24px; /* Increase padding for a larger touch area */
+        font-size: 16px; /* Increase font size for better readability */
+    }
+
+    /* Book Card Styles */
+    .featured_book_card {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    /* Section Styles */
+    .featured_boks,
+    .banner {
+        padding: 40px 0;
+    }
+
+    /* Footer Styles */
+    footer {
+        padding: 20px 0;
+    }
+
+    .search_bar input,
+    .search_bar button {
+        max-width: 30%;
+        float: right;
+    }
+    .social_link{
+        display: flex;
+        float: left;
+    }
+
+    /* End Section Styles */
+    .end {
+        margin-top: 20px;
+    }
+
+    .end span {
+        font-size: 18px;
+    }
 }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids' Interactive Website</title>
+    <style>
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        text-align: center;
+        transition: background-color 0.5s ease-in-out;
+        background-color: #ffd700; /* Playful yellow background */
+        margin: 0;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #4caf50;
+        border: 2px solid #4caf50;
+        border-radius: 10px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .button:hover {
+        background-color: #45a049;
+        transform: scale(1.1);
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #4caf50;
+        border-radius: 10px;
+        background: linear-gradient(45deg, #ffd700, #ff6347);
+        transition: transform 0.3s ease-in-out, background 0.5s ease-in-out;
+      }
+      section h2 {
+        font-size: 36px;
+        color: #4caf50;
+        margin-bottom: 10px;
+      }
+
+      section p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      /* Add hover effect for h2 and p */
+      section:hover h2,
+      section:hover p {
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+      }
+
+      footer {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 20px;
+      }
+
+      /* Add playful animations */
+      .floating-stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("https://i.imgur.com/jRK9tXt.png") repeat;
+        animation: animateStars 50s linear infinite;
+        pointer-events: none; /* Ensure clicks go through to buttons */
+      }
+
+      @keyframes animateStars {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 100%;
+        }
+      }
+
+      /* Responsive styles */
+      @media only screen and (max-width: 768px) {
+        header h1 {
+          font-size: 24px;
+        }
+        .button {
+          padding: 15px;
+          font-size: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .button {
+          margin: 10px;
+          padding: 15px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-stars"></div>
+    <header>
+      <h1>Welcome to the Kids' Interactive Website!</h1>
+    </header>
+
+    <section id="grade1">
+      <h2>Grade 1</h2>
+      <p>Learn basic subjects and have fun with interactive activities!</p>
+      <a href="grade-1.html" class="button">Explore Grade 1</a>
+    </section>
+
+    <section id="grade2">
+      <h2>Grade 2</h2>
+      <p>Explore new concepts and play educational games!</p>
+      <a href="grade-2.html" class="button">Explore Grade 2</a>
+    </section>
+
+    <section id="grade3">
+      <h2>Grade 3</h2>
+      <p>Discover more about science, math, and language arts!</p>
+      <a href="grade-3.html" class="button">Explore Grade 3</a>
+    </section>
+
+    <section id="grade4">
+      <h2>Grade 4</h2>
+      <p>Learn and have fun with grade 4 activities!</p>
+      <a href="grade-4.html" class="button">Explore Grade 4</a>
+    </section>
+
+    <section id="grade5">
+      <h2>Grade 5</h2>
+      <p>Exciting activities and lessons for grade 5!</p>
+      <a href="grade-5.html" class="button">Explore Grade 5</a>
+    </section>
+
+    <!-- Add more sections for other grades -->
+
+    <footer>
+      <p>&copy; 2023 Kids' Interactive Website</p>
+    </footer>
+  </body>
+</html>

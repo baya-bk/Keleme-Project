@@ -39,27 +39,41 @@ h3 {
 a {
   text-decoration: none;
   color: black;
-  border-radius: 5px;
+  border-radius: 10px; /* Make the border radius larger */
   font-weight: bold;
+  font-size: 24px; /* Increase the font size */
+  padding: 15px 30px; /* Increase padding for more click area */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-a:hover{
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+a:hover {
+  box-shadow: 0 0 10px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan, 0 0 400px cyan;
+  color: magenta;
+  transform: scale(1.1) rotate(5deg); /* Increase scale on hover */
 }
 
 ul {
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 40px;
+  gap: 60px; /* Increase the gap between items */
   list-style: none;
 }
 
 .right-side {
   display: flex;
-  padding-right: 100px;
-  font-size: 18px;
+  padding-right: 150px; /* Increase padding on the right */
+  font-size: 24px;
+  animation: bounce 1s infinite alternate;
 }
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+
 
 p {
   font-size: 18px;
@@ -69,7 +83,6 @@ p {
 .description {
   display: flex;
   padding: 40px 0;
-  justify-content: center;
   justify-content: center;
   gap: 150px;
 }
@@ -91,58 +104,129 @@ button.more,
   background: #ffffff;
   border-radius: 20px;
 }
-.loginbtn{
+.loginbtn {
   border-radius: 20px;
   height: 30px;
   border-style: none;
   background: whitesmoke;
   font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
 }
-.loginbtn:hover{
-   border-radius: 20px;
-   height: 30px;
-   border-style: none;
-   color: black;
-   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
-}
-.img1{
-  height: 400px;
 
+.loginbtn:hover {
+  background: #f0f0f0; /* Change background color on hover */
+  color: black;
+  box-shadow: 0 0 10px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan, 0 0 400px cyan;
+  transform: scale(1.1); /* Add a scaling effect on hover */
 }
-#imageGIF{
+
+.loginbtn:active {
+  transform: scale(0.9); /* Add a scaling effect when the button is pressed */
+}
+
+
+.img1 {
   height: 400px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
-.img1:hover{
-  /* box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan ; */
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+
+.img1:hover {
+  transform: scale(1.1) rotate(5deg) translate(5px, -5px); /* Add scaling, rotating, and subtle movement on hover */
+  filter: brightness(1.2); /* Increase brightness on hover */
+  box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan; /* Add a subtle box-shadow on hover */
 }
-.information {
+
+#imageGIF {
+  height: 400px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+#imageGIF:hover {
+  transform: scale(1.1) rotate(5deg) translate(5px, -5px); /* Add scaling, rotating, and subtle movement on hover */
+  filter: brightness(1.2); /* Increase brightness on hover */
+  box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan; /* Add a subtle box-shadow on hover */
+}
+
+.info-section {
+  background-color: #ffd700; /* Set a vibrant yellow background color */
+  padding: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Change to column to stack elements vertically */
   align-items: center;
-  gap: 20px;
+  text-align: center; /* Center text within .info-section */
 }
+
+.information {
+  max-width: 800px;
+  color: #333;
+}
+
 .info-title {
-  margin-top: 30px;
+  background-color: #ff69b4; /* Set a pink background color for the title */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between title and cards */
 }
+
+.info-title h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #fff; /* Set the text color to white */
+}
+
 .info-container {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: stretch; /* Make all items the same height */
+  gap: 20px; /* Space between card containers */
+}
+
+.card-container {
+  background-color: #87ceeb; /* Set a light blue background color for each card container */
+  border-radius: 20px;
+  padding: 30px;
+  flex: 1; /* Make each card container equally distribute the available space */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  border: 2px solid #36454f;
-  border-radius: 4px;
-  padding: 16px;
-  margin: 16px;
-  height: 100px;
-  width: 100px;
+  background-color: #ff6347; /* Set an orange background color for each card */
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fff;
 }
-.card-container {
-  max-width: 200px;
+.card a{
+  padding: 0;
+  color: #fff; /* Set the text color to white */
+
+
 }
+
+/* Add hover effect to the link inside the card */
+.card a:hover {
+  color: red;
+  box-shadow: none;
+}
+
+/* Adjust font size and color of the content */
+.info-container {
+  font-size: 1.2em;
+  color: #555;
+}
+
+
+
 .verse {
   display: flex;
   flex-direction: column;
