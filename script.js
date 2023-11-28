@@ -1,47 +1,69 @@
-var x = document.getElementById('login');
-var y = document.getElementById('register');
-var z = document.getElementById('btn');
-var modal = document.getElementById('login-form');
 
-function register() {
-    x.style.left = '-400px';
-    y.style.left = '50px';
-    z.style.left = '110px';
-}
+// loginform js
+// Check if the current page is index.html
+if (window.location.pathname.endsWith('/index.html')) {
+    var x = document.getElementById('login');
+    var y = document.getElementById('register');
+    var z = document.getElementById('btn');
+    var loginForm = document.getElementById('login-form');
+    var descriptionSection = document.querySelector('.description');
+    var infoSection = document.querySelector('.info-section');
+    var verseSection = document.querySelector('.verse');
+    var joinUsSection = document.querySelector('.join-us');
+    var footerSection = document.querySelector('.footer');
 
-function login() {
-    x.style.left = '50%';
-    x.style.transform = 'translateX(-50%)';
-    y.style.left = '450px';
-    z.style.left = '0px';
-    modal.style.top = '50px'; // Adjust the top position as needed
-}
-
-// Close the login form if clicked outside of it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    function register() {
+        x.style.left = '-400px';
+        y.style.left = '50px';
+        z.style.left = '110px';
     }
-};
 
+    function login() {
+        x.style.left = '50%';
+        x.style.transform = 'translateX(-50%)';
+        y.style.left = '450px';
+        z.style.left = '0px';
+        modal.style.top = '50px'; // Adjust the top position as needed
+    }
 
-document.getElementById('fetchBooksBtn').addEventListener('click', function() {
-    // Get the book type (academic, story, religious, etc.) from the clicked button
-    var bookType = this.getAttribute('data-book-type');
+    function showLoginForm() {
+        loginForm.style.display = 'block';
+        descriptionSection.style.display = 'none';
+        infoSection.style.display = 'none';
+        verseSection.style.display = 'none';
+        joinUsSection.style.display = 'none';
+        footerSection.style.display = 'none';
+    }
 
-    // Select all book cards
-    var bookCards = document.querySelectorAll('.arrivals_card');
+    function hideAllSections() {
+        descriptionSection.style.display = 'flex';
+        infoSection.style.display = 'flex';
+        verseSection.style.display = 'flex';
+        joinUsSection.style.display = 'flex';
+        footerSection.style.display = 'flex';
+        loginForm.style.display = 'none';
+    }
 
-    // Loop through each book card
-    bookCards.forEach(function(card) {
-        // Get the book type of the current card
-        var cardType = card.getAttribute('data-book-type');
+    // Execute the hideAllSections function on page load
+    hideAllSections();
 
-        // Toggle the visibility of the card based on its type
-        card.style.display = (cardType === bookType || bookType === 'all') ? 'block' : 'none';
+    // Event listener for the login button
+    document.querySelector('.loginbtn').addEventListener('click', function () {
+        showLoginForm();
     });
-});
-  
+
+    // Close the login form if clicked outside of it
+    window.onclick = function (event) {
+        if (event.target == loginForm) {
+            hideAllSections();
+        }
+    };
+}
+
+//   
+
+
+// books filtering js
 
 document.addEventListener('DOMContentLoaded', function () {
     // Select all book cards
@@ -77,8 +99,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// 
+
+
         // Change background color dynamically
-        const colors = ['#ffcccb', '#add8e6', '#ffd700', '#ff69b4', '#98fb98'];
+        const colors = ['#98fb98','#ff69b4','#ffcccb', '#add8e6', '#ffd700'];
         let currentIndex = 0;
 
         function changeBackgroundColor() {
