@@ -60,59 +60,47 @@ if (window.location.pathname.endsWith('/index.html')) {
     };
 }
 
-//   
+//
+
+//when it is resized the links will be hide
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtnIcon = document.querySelector(".toggle_btn i");
+const dropDownMenu = document.querySelector(".dropdown_menu");
+window.onresize = function() {
+  if (window.innerWidth > 992) {
+    dropDownMenu.classList.remove("open");
+    toggleBtnIcon.classList = 'fa-solid fa-bars';
+  } else {
+    dropDownMenu.classList.remove("open"); // Hide the menu on smaller screens
+    toggleBtnIcon.classList = 'fa-solid fa-bars';
+  }
+};
+
+// Initially hide the dropdown menu
+dropDownMenu.classList.remove("open");
+
+// Function to toggle the dropdown menu
+function toggleDropdownMenu() {
+  dropDownMenu.classList.toggle("open");
+  const isOpen = dropDownMenu.classList.contains("open");
+
+  toggleBtnIcon.classList = isOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars';
+}
+
+// Click event handler for the bar icon
+toggleBtn.onclick = function() {
+  toggleDropdownMenu();
+};
 
 
-// books filtering js
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all book cards
-    var bookCards = document.querySelectorAll('.featured_book_card');
-
-    // Loop through each book card
-    bookCards.forEach(function (card) {
-        // Display all books initially
-        card.style.display = 'block';
-    });
-
-    // Add click event listener to each button
-    var fetchButtons = document.querySelectorAll('.fetch_books_btn');
-    fetchButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            // Get the book type (academic, story, religious, etc.) from the clicked button
-            var bookType = this.getAttribute('data-book-type');
-
-            // Loop through each book card
-            bookCards.forEach(function (card) {
-                // Get the book type of the current card
-                var cardType = card.getAttribute('data-book-type');
-
-                // Toggle the visibility of the card based on its type
-                if (bookType === 'all' || cardType === bookType) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
+// Close the dropdown menu when clicking outside of it
+document.addEventListener('click', function(event) {
+  if (!dropDownMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
+    dropDownMenu.classList.remove('open');
+    toggleBtnIcon.classList = 'fa-solid fa-bars';
+  }
 });
 
-
-// 
-
-
-        // Change background color dynamically
-        const colors = ['#98fb98','#ff69b4','#ffcccb', '#add8e6', '#ffd700'];
-        let currentIndex = 0;
-
-        function changeBackgroundColor() {
-            document.body.style.backgroundColor = colors[currentIndex];
-            currentIndex = (currentIndex + 1) % colors.length;
-        }
-
-        // Change background color every 5 seconds
-        setInterval(changeBackgroundColor, 5000);
 
 
 
