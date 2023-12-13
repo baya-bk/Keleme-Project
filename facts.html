@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <link rel="stylesheet" href="facts.css">
+</head>
+<body>
+
+<div id="fact-container">
+    <h1> Fact Generator</h1>
+    <p id="fact"></p>
+    <button onclick="getFact()">Get Fact</button>
+</div>
+
+<script>
+    async function getFact() {
+        const url = 'https://fun-facts1.p.rapidapi.com/api/fun-facts';
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '4ddc2346admshd0c99307edcdd62p1d3f15jsn94a900fa904e',
+                'X-RapidAPI-Host': 'fun-facts1.p.rapidapi.com'
+            }
+        };
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.text();
+            document.getElementById('fact').textContent = result;
+        } catch (error) {
+            console.error('Error fetching  fact:', error);
+        }
+    }
+</script>
+
+</body>
+</html>
